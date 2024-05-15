@@ -5,10 +5,12 @@ import 'package:provider/provider.dart';
 import 'contract_linking.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     // Inserting Provider as a parent of HelloUI()
@@ -20,7 +22,7 @@ class MyApp extends StatelessWidget {
             brightness: Brightness.dark,
             primaryColor: Colors.cyan[400],
             hintColor: Colors.deepOrange[200]),
-        home: HelloUI(),
+        home: const HelloUI(),
       ),
     );
   }
