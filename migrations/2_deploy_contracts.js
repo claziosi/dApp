@@ -1,5 +1,5 @@
-const StoreLocation = artifacts.require("StoreLocation");
+const GeoCoordinates = artifacts.require("GeoCoordinates");
 
 module.exports = function(deployer) {
-    deployer.deploy(StoreLocation);
+    deployer.deploy(GeoCoordinates);
 }

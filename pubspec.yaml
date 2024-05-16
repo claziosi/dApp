@@ -11,11 +11,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  cupertino_icons: ^1.0.2
-  provider: ^6.0.2
-  http: ^0.13.4
-  web_socket_channel: ^2.1.0
-  dart_web3: ^0.0.3
+  web3dart: ^2.4.0 # Assurez-vous de vérifier la version la plus récente
+  http: ^0.13.3
+  flutter_secure_storage: ^5.0.2
 
 dev_dependencies:
   flutter_test:
@@ -25,4 +23,4 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - src/artifacts/StoreLocation.json
+    - src/artifacts/GeoCoordinates.json
