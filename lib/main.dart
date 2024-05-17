@@ -7,28 +7,32 @@ import 'package:web3dart/web3dart.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: Text('GeoCoordinates DApp')),
-        body: GeoCoordinatesScreen(),
+        appBar: AppBar(title: const Text('GeoCoordinates DApp')),
+        body: const GeoCoordinatesScreen(),
       ),
     );
   }
 }
 
 class GeoCoordinatesScreen extends StatefulWidget {
+  const GeoCoordinatesScreen({Key? key}) : super(key: key);
+
   @override
   _GeoCoordinatesScreenState createState() => _GeoCoordinatesScreenState();
 }
 
 class _GeoCoordinatesScreenState extends State<GeoCoordinatesScreen> {
-  final storage = FlutterSecureStorage();
+  final storage = const FlutterSecureStorage();
   late Web3Client ethClient;
   late String privateKey;
 
@@ -143,14 +147,14 @@ class _GeoCoordinatesScreenState extends State<GeoCoordinatesScreen> {
             onPressed: () async {
               await addCoordinate(67, -167);
             },
-            child: Text('Add Coordinate'),
+            child: const Text('Add Coordinate'),
           ),
           ElevatedButton(
             onPressed: () async {
               List<Map<String, int>> coordinates = await getAllCoordinates();
               print(coordinates);
             },
-            child: Text('Get All Coordinates'),
+            child: const Text('Get All Coordinates'),
           ),
         ],
       ),
