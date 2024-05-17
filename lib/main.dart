@@ -55,7 +55,7 @@ class _GeoCoordinatesScreenState extends State<GeoCoordinatesScreen> {
       await storage.write(
           key: "private_key",
           value:
-              "6b6258db960438ac59fc0b377a194d0ab0ca5a9bf9d6a3a684b5f33929f8e5dd");
+              "0xb4d895f99b2ceb33f53dcd3b4103621f0a28a9f96fb361d2731941d1e27ba651");
       privateKey = await storage.read(key: "private_key") ?? "";
     }
   }
@@ -84,8 +84,8 @@ class _GeoCoordinatesScreenState extends State<GeoCoordinatesScreen> {
         function: storeFunction,
         parameters: [BigInt.from(latitude), BigInt.from(longitude)],
       ),
-      chainId: null,
-      fetchChainIdFromNetworkId: true,
+      chainId: 1337,
+      fetchChainIdFromNetworkId: false,
     );
 
     print("Coordinate added successfully!");
